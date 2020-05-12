@@ -1,0 +1,60 @@
+.hero
+  background: $dark
+  position: relative
+  z-index: 1
+  padding-bottom: 185px
+  &__inner
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+  &__title
+    max-width: 60.78rem
+    width: 100%
+    text-align: center
+    color: #fefeff
+    margin-bottom: 126px
+    text-shadow: -4px 7px 9px #000000
+    line-height: 1
+    z-index: 1000
+    &--big
+      margin: 0
+      font-size: 8.05rem
+      position: relative
+      &::before,
+      &::after
+        content: ""
+        display: block
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+        z-index: -1
+        position: absolute
+      &::before
+        width: 11.85rem
+        height: 15.5rem
+        background: url("../img/paper.png")
+        left: -20px
+        top: -63px
+      &::after
+        width: 8.64rem
+        height: 10.42rem
+        background: url("../img/tomato.png")
+        top: -20px
+        right: 0px
+    &--small
+      font-size: 4.42rem
+      margin: 0
+      margin-bottom: -5px
+    &--medium
+      font-size: 6.86rem
+      letter-spacing: 0.01rem
+      margin: 0
+  &__bg
+    margin-top: -230px
+    z-index: 1
+  &__button
+    font-size: 1.8rem
+    margin-top: -270px
+    z-index: 999
+      

@@ -326,10 +326,123 @@ html {
   font-size: 14px; }
 
 body {
-  font-family: 'Borough'; }
+  font-family: 'Borough', sans-serif;
+  color: #ffffff; }
 
 .container {
   max-width: 1170px;
   width: 100%;
   margin: auto;
   padding: 15px; }
+
+.button {
+  box-shadow: -3px 4px 0 #eba327;
+  border-radius: 6px;
+  background-color: #ffffff;
+  background-image: linear-gradient(-191deg, #ffe681 0%, #ffcf4e 100%);
+  border: none;
+  padding: 1.6rem 3.9rem;
+  text-shadow: -2px 3px 3px rgba(235, 163, 39, 0.38);
+  color: #4a2909;
+  line-height: 1; }
+
+.header {
+  padding: 57px 40px 26px 40px;
+  background: #100d0d;
+  position: relative; }
+  .header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; }
+
+.menu {
+  cursor: pointer; }
+  .menu__inner {
+    display: flex;
+    align-items: center; }
+  .menu__word {
+    font-size: 1.3rem;
+    margin-left: 2rem; }
+  .menu-element {
+    height: 5px;
+    width: 37px;
+    border-radius: 20px;
+    background: #ffffff;
+    margin-bottom: 11px; }
+    .menu-element:last-child {
+      margin-bottom: 0; }
+
+.brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.contacts {
+  color: #ffffff; }
+  .contacts-phone {
+    font-size: 2.13rem;
+    line-height: 2.5rem; }
+  .contacts-period {
+    font-size: 0.86rem;
+    line-height: 2.5rem;
+    font-family: 'Montserrat', sans serif; }
+
+.hero {
+  background: #100d0d;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 185px; }
+  .hero__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .hero__title {
+    max-width: 60.78rem;
+    width: 100%;
+    text-align: center;
+    color: #fefeff;
+    margin-bottom: 126px;
+    text-shadow: -4px 7px 9px #000000;
+    line-height: 1;
+    z-index: 1000; }
+    .hero__title--big {
+      margin: 0;
+      font-size: 8.05rem;
+      position: relative; }
+      .hero__title--big::before, .hero__title--big::after {
+        content: "";
+        display: block;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+        position: absolute; }
+      .hero__title--big::before {
+        width: 11.85rem;
+        height: 15.5rem;
+        background: url("../img/paper.png");
+        left: -20px;
+        top: -63px; }
+      .hero__title--big::after {
+        width: 8.64rem;
+        height: 10.42rem;
+        background: url("../img/tomato.png");
+        top: -20px;
+        right: 0px; }
+    .hero__title--small {
+      font-size: 4.42rem;
+      margin: 0;
+      margin-bottom: -5px; }
+    .hero__title--medium {
+      font-size: 6.86rem;
+      letter-spacing: 0.01rem;
+      margin: 0; }
+  .hero__bg {
+    margin-top: -230px;
+    z-index: 1; }
+  .hero__button {
+    font-size: 1.8rem;
+    margin-top: -270px;
+    z-index: 999; }
