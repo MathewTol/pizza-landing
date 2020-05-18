@@ -1,0 +1,83 @@
+.catalog
+  position: relative
+  z-index: 10000
+  &-inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 35px
+    &__card
+      background: $dark-gray
+      border-radius: 5px
+      position: relative
+      overflow: hidden
+      padding: 0px 30px 26px
+      transition: linear 0.1s
+      &:hover .catalog-inner__card-image
+        margin-top: -5rem
+      &:hover
+        background-color: $red
+      &:hover .catalog-inner__card-recipe
+        color: $white
+      &-content
+        display: flex
+        flex-direction: column
+        align-items: center
+      &-image
+        max-width: 160px
+        width: 100%
+        margin-top: -5.57rem
+        transition: linear 0.1s 
+        position: absolute
+      &-name
+        font-size: 2.14rem
+        font-weight: 400
+        line-height: 1
+        padding-top: 7.8rem
+        margin: 0
+        margin-bottom: 5px
+      &-recipe
+        margin: 0
+        max-width: 155px
+        width: 100%
+        text-align: center
+        font-family: 'Montserrat', sans-serif
+        color: $gray
+        font-size: 1.058rem
+        transition: linear 0.1s
+        line-height: 1.2rem
+        margin-bottom: 10px
+      &-size
+        font-size: 2rem 
+        font-weight: 400
+        margin: 0
+        line-height: 1
+        margin-bottom: 10px
+        &--inner
+          display: flex
+          justify-content: space-between
+          margin-bottom: 21px
+          &---choice
+            width: 42px
+            height: 42px
+            border-radius: 50%
+            border: 2px solid $white
+            display: flex
+            font-size: 1.2rem
+            justify-content: center
+            align-items: center
+            margin-right: 17px
+            cursor: pointer
+            &:last-child
+              margin-right: 0
+            &:hover
+              border-color: $primary
+              color: $primary
+              transition: linear 0.1s
+      &-button
+        font-size: 1.07rem
+        line-height: 16.34px
+        padding: 10px 16px
+        cursor: pointer
+.section-title--catalog
+  padding-bottom: 17px

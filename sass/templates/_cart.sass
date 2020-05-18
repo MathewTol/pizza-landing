@@ -1,0 +1,220 @@
+.cart
+  max-width: 67rem
+  width: 100%
+  background-color: $dark-gray
+  padding: 1.78rem
+  border-radius: 5px
+  &__heading
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0
+    margin: 0
+    margin-bottom: 1.5rem
+    &-title
+      font-size: 3rem
+    &-closeBtn
+      font-size: 3rem
+      background: none
+      border: none
+      transform: rotate(45deg)
+      color: $white
+      position: relative
+      outline: none
+      &::after
+        content: ""
+        position: absolute
+        top: 7px
+        right: -3px
+        width: 40px
+        height: 40px
+        border: 3px solid $primary
+        border-radius: 50%
+        opacity: 0
+        transition: linear 0.1s
+  &-inner 
+    display: flex
+    justify-content: space-between
+    height: 38.2rem
+    &__food
+      max-height: 100%
+      height: 100%
+      overflow-y: scroll
+      padding-right: 15px
+      &-card
+        display: flex
+        align-items: center
+        background-color: $dark
+        padding: 1.07rem
+        margin-bottom: 10px
+        border-radius: 5px
+        &:last-child
+          margin-bottom: 0
+        &--photo
+          max-width: 125px
+          width: 100%
+          max-height: 125px
+          height: 100%
+          margin-right: 1.9rem
+        &--info
+          margin-right: 2rem
+          &---name
+            font-weight: 400
+            font-size: 2rem
+            line-height: 1
+            margin: 0
+            margin-top: -10px
+          &---recipe
+            font-family: 'Montserrat', sans-serif
+            color: $gray
+            font-size: 0.9rem
+            margin: 0
+            margin-top: 5px
+        &--size
+          width: 35px
+          height: 35px
+          display: flex
+          justify-content: center
+          align-items: center
+          border: 2px solid #fbc646
+          border-radius: 50%
+          color: $primary
+          font-size: 1.2rem
+          line-height: 1
+          margin-right: 2rem
+          &---inner
+            margin-top: -3px
+        &--price
+          color: $primary
+          font-size: 2rem
+    &__form
+      display: flex
+      flex-direction: column
+      align-items: center
+      max-width: 20rem
+      width: 100%
+      &-title
+        font-size: 2rem
+        font-weight: 400
+        line-height: 1
+        margin: 0
+        margin-bottom: 1rem
+      &-form
+        &--checkbox
+          opacity: 0
+          &---label
+            padding: 4px 7px 7px 15px
+            position: relative
+            cursor: pointer
+            &:hover
+              color: $primary
+              transition: linear 0.1s
+            &::before
+              content: ""
+              width: 20px
+              display: block
+              height: 20px
+              border: 2px solid $dark
+              position: absolute
+              border-radius: 2px
+              left: -13px
+              top: 0px
+            &::after
+              content: ""
+              display: inline-block
+              height: 6px
+              width: 9px
+              border-left: 2px solid $gray
+              border-bottom: 2px solid $gray
+              transform: rotate(-45deg)
+              position: absolute
+              left: -7px
+              top: 6px
+            &:hover
+              color: $primary
+              transition: linear 0.1s
+        &--input
+          &---group
+            display: flex
+            flex-direction: column
+            max-width: 100%
+            width: 100%
+            margin-bottom: 18px
+            &__label
+              font-size: 0.9rem
+              font-family: 'Montserrat', sans-serif
+              color: $gray
+              line-height: 1
+              margin-bottom: 14px
+            &__input
+              height: 4rem
+              padding: 20px
+              font-family: 'Montserrat', sans-serif
+              background-color: $dark
+              border: none
+              border-radius: 5px
+              color: $gray
+              &-textarea
+                height: 8rem
+                padding: 5px
+                resize: none
+            &----checkbox
+              display: flex
+              align-items: center
+              font-family: 'Montserrat', sans-serif
+              color: $gray
+              font-size: 0.85rem
+              margin-top: 7px
+              margin-bottom: 7px
+              cursor: pointer
+        &--price
+          font-size: 2rem
+          margin-bottom: 17px
+          line-height: 1
+          &---primary
+            color: $primary
+            padding-left: 10px
+        &--button
+          max-width: 100%
+          width: 100%
+          padding: 1rem 3rem
+          font-size: 1.3rem
+          line-height: 1
+.cart-inner__food,
+.cart-inner__form-form--input---group__input-textarea
+  &::-webkit-scrollbar
+    width: 16px
+  &::-webkit-scrollbar-track
+    background-color: $dark
+    border-radius: 10px
+  &::-webkit-scrollbar-thumb
+    background-color: $dark-gray
+    border-radius: 20px
+    border: 4px solid $dark
+.cart-inner__form-form--checkbox[type="checkbox"] + .cart-inner__form-form--checkbox---label::after
+  content: none
+.cart-inner__form-form--checkbox[type="checkbox"]:checked + .cart-inner__form-form--checkbox---label::after
+  content: ""
+  border-left: 2px solid $primary
+  border-bottom: 2px solid $primary
+.cart-inner__form-form--checkbox[type="checkbox"]:checked + .cart-inner__form-form--checkbox---label
+  color: $primary
+.cart-inner__form-form--checkbox[type="checkbox"]:checked + .cart-inner__form-form--checkbox---label::before
+  border: 2px solid $primary
+.cart-inner__form-form--checkbox[type="checkbox"]:focus + .cart-inner__form-form--checkbox---label::before
+  outline: $primary auto 1px
+.cart-inner__form-form--input---group__input:focus
+  outline: $primary auto 1px
+.cart-inner__form-form--checkbox:hover + .cart-inner__form-form--checkbox---label::after
+  border-left: 2px solid $primary
+  border-bottom: 2px solid $primary
+  transition: linear 0.1s
+.cart-inner__form-form--checkbox:hover + .cart-inner__form-form--checkbox---label::before
+  border: 2px solid $primary
+  transition: linear 0.1s
+.cart__heading-closeBtn:hover
+  color: $primary
+  transition: linear 0.1s
+  outline: none
+.cart__heading-closeBtn:hover.cart__heading-closeBtn::after
+  opacity: 1

@@ -1,8 +1,22 @@
 .hero
   background: $dark
   position: relative
-  z-index: 1
   padding-bottom: 185px
+  &::before,
+  &::after
+    content: ""
+    width: 42.78rem
+    display: block
+    height: 46.65rem
+    background: url(../img/scratches.png)
+    position: absolute
+  &::before
+    left: 15.8rem
+    top: -9rem
+  &::after
+    transform: rotate(-180deg)
+    right: 14.64rem
+    top: -7.14rem
   &__inner
     display: flex
     flex-direction: column
@@ -21,6 +35,7 @@
       margin: 0
       font-size: 8.05rem
       position: relative
+      font-weight: 400
       &::before,
       &::after
         content: ""
@@ -46,15 +61,20 @@
       font-size: 4.42rem
       margin: 0
       margin-bottom: -5px
+      font-weight: 400
     &--medium
       font-size: 6.86rem
       letter-spacing: 0.01rem
       margin: 0
+      font-weight: 400
   &__bg
     margin-top: -230px
     z-index: 1
+    max-width: 69.57rem
+    width: 100%
   &__button
     font-size: 1.8rem
     margin-top: -270px
     z-index: 999
+    padding: 1.6rem 3.9rem
       
