@@ -1,0 +1,42 @@
+.modal__call
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.7)
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 10004
+  &-inner
+    max-width: 350px
+    width: 100%
+    max-height: 450px
+    height: 100%
+    background: $dark url(../img/beton.jpg)
+    background-size: contain
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding: 2rem
+  &-title
+    font-size: 2rem
+    margin-bottom: 2.5rem
+  &-form
+    width: 100%
+    &-group
+      display: flex
+      flex-direction: column
+    &-label
+      font-family: 'Montserrat', sans-serif
+      color: $gray
+      font-size: 1.1rem
+      margin-bottom: 0.5rem
+      padding: 5px 
+    &-input
+      border: none
+      background-color: $dark-gray
+      padding: 1.2rem
+      margin-bottom: 1rem
+      color: $gray
+      font-family: 'Montserrat', sans-serif
+      font-size: 1rem

@@ -2,27 +2,18 @@
   padding: 57px 40px 39px 40px
   background: $dark
   position: relative
+  background: $dark url(../img/beton.jpg)
+  background-size: contain
+  background-repeat: repeat
   &__inner
     display: flex
     justify-content: space-between
     align-items: center
     position: relative
-.menu
-  cursor: pointer
-  &__inner  
-    display: flex
-    align-items: center
-  &__word
-    font-size: 1.3rem
-    margin-left: 2rem
-  &-element
-    height: 5px
-    width: 37px
-    border-radius: 20px
-    background: $white
-    margin-bottom: 11px
-    &:last-child
-      margin-bottom: 0
+  &__button
+    padding: 1rem 2rem
+    z-index: 10
+    font-size: 1.2rem
 .brand
   position: absolute
   left: 50%

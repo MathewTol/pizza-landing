@@ -1,16 +1,31 @@
 .cart
+  position: fixed
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  z-index: 10002
   max-width: 67rem
   width: 100%
   background-color: $dark-gray
   padding: 1.78rem
+  padding-top: 1rem
   border-radius: 5px
+  opacity: 0
+  visibility: hidden
+  transition: linear 0.2s
+  background: $dark url(../img/beton.jpg)
+  background-size: contain
+  background-repeat: repeat
+  &-showed
+    opacity: 1
+    visibility: visible
   &__heading
     display: flex
     justify-content: space-between
     align-items: center
     padding: 0
     margin: 0
-    margin-bottom: 1.5rem
+    margin-bottom: 0.7rem
     &-title
       font-size: 3rem
     &-closeBtn

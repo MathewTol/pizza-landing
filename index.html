@@ -13,23 +13,14 @@
 <body>
   <header class="header">
     <div class="header__inner">
-      <div class="menu">
-        <div class="menu__inner">
-          <div class="menu__element">
-            <div class='menu-element'></div>
-            <div class='menu-element'></div>
-            <div class='menu-element'></div>
-          </div>
-          <h4 class="menu__word">Меню</h4>
-        </div>
-      </div>
-      <div class="brand">
-        <img src="img/brand.png" alt="brand">
-      </div>
       <div class="contacts">
         <div class="contacts-phone">+7 (491) 213-21-22</div>
         <div class="contacts-period">Ежедневно с 10.00 до 23.00</div>
       </div>
+      <div class="brand">
+        <img src="img/brand.png" alt="brand">
+      </div>
+      <button class="button header__button">Заказать по телефону</button>
     </div>
   </header>
   <!-- /. Header -->
@@ -41,7 +32,12 @@
           <h1 class='hero__title--small'>Доставим за 60 минут или</h1>
           <h1 class='hero__title--medium'>пицца бесплатно</h1>
         </div>
-        <img class='hero__bg' src="img/pizza.png" alt="pizza">
+        <img data-speed-x='10' data-speed-y='10'
+          class='layer hero__layer hero__layer-absolute hero__layer-absolute--left' src="img/scratches.png" alt="Искры">
+        <img data-speed-x='5' data-speed-y='5' class='layer hero__bg hero__layer' src="img/pizza.png" alt="Пицца">
+        <img data-speed-x='10' data-speed-y='10'
+          class='layer hero__layer hero__layer-absolute hero__layer-absolute--right' src="img/scratches-reversed.png"
+          alt="Искры">
         <button class="button hero__button">Выбрать свою пиццу</button>
       </div>
     </div>
@@ -64,7 +60,7 @@
               <div class="catalog-inner__card-size--inner---choice">21</div>
               <div class="catalog-inner__card-size--inner---choice">21</div>
             </div>
-            <button class="button catalog-inner__card-button">Заказать от 450 руб</button>
+            <button onclick="toggleModal();" class="button catalog-inner__card-button">Заказать от 450 руб</button>
           </div>
         </div>
         <!-- /. catalog-inner__card -->
@@ -80,7 +76,7 @@
               <div class="catalog-inner__card-size--inner---choice">21</div>
               <div class="catalog-inner__card-size--inner---choice">21</div>
             </div>
-            <button class="button catalog-inner__card-button">Заказать от 450 руб</button>
+            <button onclick="toggleModal();" class="button catalog-inner__card-button">Заказать от 450 руб</button>
           </div>
         </div>
         <!-- /. catalog-inner__card -->
@@ -96,7 +92,7 @@
               <div class="catalog-inner__card-size--inner---choice">21</div>
               <div class="catalog-inner__card-size--inner---choice">21</div>
             </div>
-            <button class="button catalog-inner__card-button">Заказать от 450 руб</button>
+            <button onclick="toggleModal();" class="button catalog-inner__card-button">Заказать от 450 руб</button>
           </div>
         </div>
         <!-- /. catalog-inner__card -->
@@ -112,73 +108,7 @@
               <div class="catalog-inner__card-size--inner---choice">21</div>
               <div class="catalog-inner__card-size--inner---choice">21</div>
             </div>
-            <button class="button catalog-inner__card-button">Заказать от 450 руб</button>
-          </div>
-        </div>
-        <!-- /. catalog-inner__card -->
-      </div>
-      <div class="catalog-inner">
-        <div class="catalog-inner__card">
-          <div class="catalog-inner__card-content">
-            <img src="img/pizza-card.png" alt="Пицца" class="catalog-inner__card-image">
-            <h3 class="catalog-inner__card-name">«Базука»</h3>
-            <p class="catalog-inner__card-recipe">Кетчуп, томаты, сыр,
-              пепперони</p>
-            <h4 class="catalog-inner__card-size">Размер<sup>см</sup></h4>
-            <div class="catalog-inner__card-size--inner">
-              <div class="catalog-inner__card-size--inner---choice">21</div>
-              <div class="catalog-inner__card-size--inner---choice">21</div>
-              <div class="catalog-inner__card-size--inner---choice">21</div>
-            </div>
-            <button class="button catalog-inner__card-button">Заказать от 450 руб</button>
-          </div>
-        </div>
-        <!-- /. catalog-inner__card -->
-        <div class="catalog-inner__card">
-          <div class="catalog-inner__card-content">
-            <img src="img/pizza-card.png" alt="Пицца" class="catalog-inner__card-image">
-            <h3 class="catalog-inner__card-name">«Базука»</h3>
-            <p class="catalog-inner__card-recipe">Кетчуп, томаты, сыр,
-              пепперони</p>
-            <h4 class="catalog-inner__card-size">Размер<sup>см</sup></h4>
-            <div class="catalog-inner__card-size--inner">
-              <div class="catalog-inner__card-size--inner---choice">21</div>
-              <div class="catalog-inner__card-size--inner---choice">21</div>
-              <div class="catalog-inner__card-size--inner---choice">21</div>
-            </div>
-            <button class="button catalog-inner__card-button">Заказать от 450 руб</button>
-          </div>
-        </div>
-        <!-- /. catalog-inner__card -->
-        <div class="catalog-inner__card">
-          <div class="catalog-inner__card-content">
-            <img src="img/pizza-card.png" alt="Пицца" class="catalog-inner__card-image">
-            <h3 class="catalog-inner__card-name">«Базука»</h3>
-            <p class="catalog-inner__card-recipe">Кетчуп, томаты, сыр,
-              пепперони</p>
-            <h4 class="catalog-inner__card-size">Размер<sup>см</sup></h4>
-            <div class="catalog-inner__card-size--inner">
-              <div class="catalog-inner__card-size--inner---choice">21</div>
-              <div class="catalog-inner__card-size--inner---choice">21</div>
-              <div class="catalog-inner__card-size--inner---choice">21</div>
-            </div>
-            <button class="button catalog-inner__card-button">Заказать от 450 руб</button>
-          </div>
-        </div>
-        <!-- /. catalog-inner__card -->
-        <div class="catalog-inner__card">
-          <div class="catalog-inner__card-content">
-            <img src="img/pizza-card.png" alt="Пицца" class="catalog-inner__card-image">
-            <h3 class="catalog-inner__card-name">«Базука»</h3>
-            <p class="catalog-inner__card-recipe">Кетчуп, томаты, сыр,
-              пепперони</p>
-            <h4 class="catalog-inner__card-size">Размер<sup>см</sup></h4>
-            <div class="catalog-inner__card-size--inner">
-              <div class="catalog-inner__card-size--inner---choice">21</div>
-              <div class="catalog-inner__card-size--inner---choice">21</div>
-              <div class="catalog-inner__card-size--inner---choice">21</div>
-            </div>
-            <button class="button catalog-inner__card-button">Заказать от 450 руб</button>
+            <button onclick="toggleModal();" class="button catalog-inner__card-button">Заказать от 450 руб</button>
           </div>
         </div>
         <!-- /. catalog-inner__card -->
@@ -196,7 +126,7 @@
               <div class="catalog-inner__card-size--inner---choice">21</div>
               <div class="catalog-inner__card-size--inner---choice">21</div>
             </div>
-            <button class="button catalog-inner__card-button">Заказать от 450 руб</button>
+            <button onclick="toggleModal();" class="button catalog-inner__card-button">Заказать от 450 руб</button>
           </div>
         </div>
         <!-- /. catalog-inner__card -->
@@ -212,7 +142,7 @@
               <div class="catalog-inner__card-size--inner---choice">21</div>
               <div class="catalog-inner__card-size--inner---choice">21</div>
             </div>
-            <button class="button catalog-inner__card-button">Заказать от 450 руб</button>
+            <button onclick="toggleModal();" class="button catalog-inner__card-button">Заказать от 450 руб</button>
           </div>
         </div>
         <!-- /. catalog-inner__card -->
@@ -228,7 +158,7 @@
               <div class="catalog-inner__card-size--inner---choice">21</div>
               <div class="catalog-inner__card-size--inner---choice">21</div>
             </div>
-            <button class="button catalog-inner__card-button">Заказать от 450 руб</button>
+            <button onclick="toggleModal();" class="button catalog-inner__card-button">Заказать от 450 руб</button>
           </div>
         </div>
         <!-- /. catalog-inner__card -->
@@ -244,7 +174,7 @@
               <div class="catalog-inner__card-size--inner---choice">21</div>
               <div class="catalog-inner__card-size--inner---choice">21</div>
             </div>
-            <button class="button catalog-inner__card-button">Заказать от 450 руб</button>
+            <button onclick="toggleModal();" class="button catalog-inner__card-button">Заказать от 450 руб</button>
           </div>
         </div>
         <!-- /. catalog-inner__card -->
@@ -262,7 +192,7 @@
               <div class="catalog-inner__card-size--inner---choice">21</div>
               <div class="catalog-inner__card-size--inner---choice">21</div>
             </div>
-            <button class="button catalog-inner__card-button">Заказать от 450 руб</button>
+            <button onclick="toggleModal();" class="button catalog-inner__card-button">Заказать от 450 руб</button>
           </div>
         </div>
         <!-- /. catalog-inner__card -->
@@ -278,7 +208,7 @@
               <div class="catalog-inner__card-size--inner---choice">21</div>
               <div class="catalog-inner__card-size--inner---choice">21</div>
             </div>
-            <button class="button catalog-inner__card-button">Заказать от 450 руб</button>
+            <button onclick="toggleModal();" class="button catalog-inner__card-button">Заказать от 450 руб</button>
           </div>
         </div>
         <!-- /. catalog-inner__card -->
@@ -294,7 +224,7 @@
               <div class="catalog-inner__card-size--inner---choice">21</div>
               <div class="catalog-inner__card-size--inner---choice">21</div>
             </div>
-            <button class="button catalog-inner__card-button">Заказать от 450 руб</button>
+            <button onclick="toggleModal();" class="button catalog-inner__card-button">Заказать от 450 руб</button>
           </div>
         </div>
         <!-- /. catalog-inner__card -->
@@ -310,7 +240,73 @@
               <div class="catalog-inner__card-size--inner---choice">21</div>
               <div class="catalog-inner__card-size--inner---choice">21</div>
             </div>
-            <button class="button catalog-inner__card-button">Заказать от 450 руб</button>
+            <button onclick="toggleModal();" class="button catalog-inner__card-button">Заказать от 450 руб</button>
+          </div>
+        </div>
+        <!-- /. catalog-inner__card -->
+      </div>
+      <div class="catalog-inner">
+        <div class="catalog-inner__card">
+          <div class="catalog-inner__card-content">
+            <img src="img/pizza-card.png" alt="Пицца" class="catalog-inner__card-image">
+            <h3 class="catalog-inner__card-name">«Базука»</h3>
+            <p class="catalog-inner__card-recipe">Кетчуп, томаты, сыр,
+              пепперони</p>
+            <h4 class="catalog-inner__card-size">Размер<sup>см</sup></h4>
+            <div class="catalog-inner__card-size--inner">
+              <div class="catalog-inner__card-size--inner---choice">21</div>
+              <div class="catalog-inner__card-size--inner---choice">21</div>
+              <div class="catalog-inner__card-size--inner---choice">21</div>
+            </div>
+            <button onclick="toggleModal();" class="button catalog-inner__card-button">Заказать от 450 руб</button>
+          </div>
+        </div>
+        <!-- /. catalog-inner__card -->
+        <div class="catalog-inner__card">
+          <div class="catalog-inner__card-content">
+            <img src="img/pizza-card.png" alt="Пицца" class="catalog-inner__card-image">
+            <h3 class="catalog-inner__card-name">«Базука»</h3>
+            <p class="catalog-inner__card-recipe">Кетчуп, томаты, сыр,
+              пепперони</p>
+            <h4 class="catalog-inner__card-size">Размер<sup>см</sup></h4>
+            <div class="catalog-inner__card-size--inner">
+              <div class="catalog-inner__card-size--inner---choice">21</div>
+              <div class="catalog-inner__card-size--inner---choice">21</div>
+              <div class="catalog-inner__card-size--inner---choice">21</div>
+            </div>
+            <button onclick="toggleModal();" class="button catalog-inner__card-button">Заказать от 450 руб</button>
+          </div>
+        </div>
+        <!-- /. catalog-inner__card -->
+        <div class="catalog-inner__card">
+          <div class="catalog-inner__card-content">
+            <img src="img/pizza-card.png" alt="Пицца" class="catalog-inner__card-image">
+            <h3 class="catalog-inner__card-name">«Базука»</h3>
+            <p class="catalog-inner__card-recipe">Кетчуп, томаты, сыр,
+              пепперони</p>
+            <h4 class="catalog-inner__card-size">Размер<sup>см</sup></h4>
+            <div class="catalog-inner__card-size--inner">
+              <div class="catalog-inner__card-size--inner---choice">21</div>
+              <div class="catalog-inner__card-size--inner---choice">21</div>
+              <div class="catalog-inner__card-size--inner---choice">21</div>
+            </div>
+            <button onclick="toggleModal();" class="button catalog-inner__card-button">Заказать от 450 руб</button>
+          </div>
+        </div>
+        <!-- /. catalog-inner__card -->
+        <div class="catalog-inner__card">
+          <div class="catalog-inner__card-content">
+            <img src="img/pizza-card.png" alt="Пицца" class="catalog-inner__card-image">
+            <h3 class="catalog-inner__card-name">«Базука»</h3>
+            <p class="catalog-inner__card-recipe">Кетчуп, томаты, сыр,
+              пепперони</p>
+            <h4 class="catalog-inner__card-size">Размер<sup>см</sup></h4>
+            <div class="catalog-inner__card-size--inner">
+              <div class="catalog-inner__card-size--inner---choice">21</div>
+              <div class="catalog-inner__card-size--inner---choice">21</div>
+              <div class="catalog-inner__card-size--inner---choice">21</div>
+            </div>
+            <button onclick="toggleModal();" class="button catalog-inner__card-button">Заказать от 450 руб</button>
           </div>
         </div>
         <!-- /. catalog-inner__card -->
@@ -392,6 +388,7 @@
     </div>
   </footer>
 
+
   <div class="cart">
     <div class="cart__heading">
       <div class="cart__heading-title">Корзина</div>
@@ -456,12 +453,12 @@
         <h3 class="cart-inner__form-title">Заказать онлайн</h3>
         <form class="cart-inner__form-form">
           <div class="cart-inner__form-form--input---group">
-            <label for="name" class="cart-inner__form-form--input---group__label">Ваше имя:</label>
-            <input type="text" class="cart-inner__form-form--input---group__input" placeholder="Артём">
+            <label for="name-cart" class="cart-inner__form-form--input---group__label">Ваше имя:</label>
+            <input type="text" name='name-cart' class="cart-inner__form-form--input---group__input" placeholder="Артём">
           </div>
           <div class="cart-inner__form-form--input---group">
-            <label for="phone" class="cart-inner__form-form--input---group__label">Ваш номер телефона:</label>
-            <input type="phone" class="cart-inner__form-form--input---group__input"
+            <label for="phone-cart" class="cart-inner__form-form--input---group__label">Ваш номер телефона:</label>
+            <input name='phone-cart' type="text" class="cart-inner__form-form--input---group__input"
               placeholder="+7 (231) 241 - 22 - 22">
           </div>
           <div class="cart-inner__form-form--input---group">
@@ -470,8 +467,8 @@
             <textarea
               class="cart-inner__form-form--input---group__input cart-inner__form-form--input---group__input-textarea"></textarea>
           </div>
-          <div class="cart-inner__form-form--input---group----checkbox"> <input id='policy' value='agreement' type="checkbox"
-              class="cart-inner__form-form--checkbox" name='policy'>
+          <div class="cart-inner__form-form--input---group----checkbox"> <input id='policy' value='agreement'
+              type="checkbox" class="cart-inner__form-form--checkbox" name='policy'>
             <label for="policy" class="cart-inner__form-form--checkbox---label">Я соглашаюсь с обработкой
               данных</label>
           </div>
@@ -483,6 +480,29 @@
       </div>
     </div>
   </div>
+
+  <div class="modal__call">
+    <div class="modal__call-inner">
+      <div class="modal__call-title">Заказать онлайн</div>
+      <form class="modal__call-form">
+        <div class="modal__call-form-group">
+          <label for="modalName" class="modal__call-form-label">Ваше имя</label>
+          <input type="modalName" class="modal__call-form-input" placeholder="Артём">
+        </div>
+        <div class="modal__call-form-group">
+          <label for="modalName" class="modal__call-form-label">Ваш номер телефона</label>
+          <input type="text" class="modal__call-form-input" placeholder="Артём">
+        </div>
+        <div class="modal__call-form-group--checkbox">
+          <input name='modal__call-agreement' type="checkbox" class="modal__call-form-input--checkbox" placeholder="Артём">
+          <label for="modal__call-agreement" class="modal__call-form-label--checkbox">Я соглашаюсь с обработкой данных</label>
+        </div>
+        <div class="button modal__call-button">Отправить</div>
+      </form>
+    </div>
+  </div>
+
+  <div class="overlayModal"></div>
   <!-- /.cart -->
 
   <script src="js/app.js"></script>

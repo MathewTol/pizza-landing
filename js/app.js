@@ -124,21 +124,30 @@ function init() {
     myMap.geoObjects.add(myPolygon);
 }
 
-// Change color
-// var modal = document.querySelector(".catalog-inner__card-button");
-// var trigger = document.querySelector(".trigger");
-// var closeButton = document.querySelector(".close-button");
+// Модальное окно
+var modal = document.querySelector(".cart");
+var closeButton = document.querySelector(".cart__heading-closeBtn");
+var overlayModal = document.querySelector(".overlayModal");
+function toggleModal() {
+    modal.classList.toggle("cart-showed");
+    overlayModal.classList.toggle("overlayModal-showed");
+}
 
-// function toggleModal() {
-//     modal.classList.toggle("show-modal");
-// }
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+closeButton.addEventListener("click", toggleModal);
+overlayModal.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
 
-// function windowOnClick(event) {
-//     if (event.target === modal) {
-//         toggleModal();
-//     }
-// }
-
-// trigger.addEventListener("click", toggleModal);
-// closeButton.addEventListener("click", toggleModal);
-// window.addEventListener("click", windowOnClick);
+// Паралакс эффект
+function parralax(event) {
+    this.querySelectorAll('.layer').forEach(layer => {
+        let speedX = layer.getAttribute('data-speed-x')
+        let speedY = layer.getAttribute('data-speed-y')
+        layer.style.transform = `translate(${event.clientX * speedX / 1000}px, ${event.clientY * speedY / 1000}px)`
+    })
+}
+document.addEventListener('mousemove', parralax)

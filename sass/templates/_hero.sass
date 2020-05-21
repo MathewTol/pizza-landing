@@ -1,22 +1,9 @@
 .hero
+  padding-bottom: 205px
   background: $dark
-  position: relative
-  padding-bottom: 185px
-  &::before,
-  &::after
-    content: ""
-    width: 42.78rem
-    display: block
-    height: 46.65rem
-    background: url(../img/scratches.png)
-    position: absolute
-  &::before
-    left: 15.8rem
-    top: -9rem
-  &::after
-    transform: rotate(-180deg)
-    right: 14.64rem
-    top: -7.14rem
+  background: $dark url(../img/beton.jpg)
+  background-size: contain
+  background-repeat: repeat
   &__inner
     display: flex
     flex-direction: column
@@ -68,10 +55,20 @@
       margin: 0
       font-weight: 400
   &__bg
-    margin-top: -230px
+    margin-top: -250px
     z-index: 1
     max-width: 69.57rem
     width: 100%
+    position: relative
+  &__layer
+    &-absolute
+      position: absolute
+      &--left
+        left: 220px
+        top: 40px
+      &--right
+        right: 170px
+        top: 70px
   &__button
     font-size: 1.8rem
     margin-top: -270px

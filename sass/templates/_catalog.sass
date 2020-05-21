@@ -1,6 +1,10 @@
 .catalog
   position: relative
+  background: $dark
   z-index: 10000
+  background: $dark url(../img/beton.jpg)
+  background-size: contain
+  background-repeat: repeat
   &-inner
     display: flex
     justify-content: space-between
@@ -25,6 +29,8 @@
         align-items: center
       &-image
         max-width: 160px
+        max-height: 160px
+        height: 100%
         width: 100%
         margin-top: -5.57rem
         transition: linear 0.1s 
